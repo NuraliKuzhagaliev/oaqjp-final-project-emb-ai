@@ -1,0 +1,32 @@
+Script started on 2026-11-11 13:50:58-05:00 [TERM="xterm-color" TTY="/dev/pts/1" COLUMNS="191" LINES="16"]
+theia@theiadocker-nurali600221:/home/project/final_project$ python3
+
+Python 3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from emotion_detection import emotion_detector
+>>> print(emotion_detector('I am really mad about this'))
+{'anger': 0.6674731, 'disgust': 0.022848725, 'fear': 0.09749009, 'joy': 0.011863918, 'sadness': 0.1953058, 'dominant_emotion': 'anger'}
+>>> 
+>>> exit()
+theia@theiadocker-nurali600221:/home/project/final_project$ python3 test_emotion_detection.py
+
+test_anger (__main__.TestEmotionDetection)
+An angry statement should be classified as anger. ... ok
+test_disgust (__main__.TestEmotionDetection)
+Disgust should be recognized. ... ok
+test_fear (__main__.TestEmotionDetection)
+Fear should be recognized. ... ok
+test_joy (__main__.TestEmotionDetection)
+A happy statement should be classified as joy. ... ok
+test_sadness (__main__.TestEmotionDetection)
+A sad statement should be classified as sadness. ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.579s
+
+OK
+theia@theiadocker-nurali600221:/home/project/final_project$ exit
+
+exit
+
+Script done on 2026-11-11 13:51:43-05:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,18 @@
+/home/project/final_project$ python3 test_emotion_detection.py
+test_anger (__main__.TestEmotionDetection)
+An angry statement should be classified as anger. ... ok
+test_disgust (__main__.TestEmotionDetection)
+Disgust should be recognized. ... ok
+test_fear (__main__.TestEmotionDetection)
+Fear should be recognized. ... ok
+test_joy (__main__.TestEmotionDetection)
+A happy statement should be classified as joy. ... ok
+test_sadness (__main__.TestEmotionDetection)
+A sad statement should be classified as sadness. ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.535s
+
+OK
+
+Exit code: 0

@@ -1,0 +1,20 @@
+/home/project/final_project$ python3 -m unittest test_contracts -v
+test_blank_input (test_contracts.TestContracts)
+Invalid input must not call the provider. ... ok
+test_formatted_output_and_request (test_contracts.TestContracts)
+Send the Watson contract and select the highest score. ... ok
+test_http_400 (test_contracts.TestContracts)
+A provider rejection must return the six-key None result. ... ok
+test_web_blank (test_contracts.TestContracts)
+The real Flask route must show the required input error message. ... ok
+test_web_service_failure (test_contracts.TestContracts)
+A timeout must be a service error instead of an input error. ... ok
+test_web_success (test_contracts.TestContracts)
+The route must display every score and the dominant emotion. ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.022s
+
+OK
+
+Exit code: 0
