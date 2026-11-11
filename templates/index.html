@@ -1,32 +1,38 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="./static/mywebscript.js"></script>
-    <style>
-        .center-heading {
-            text-align: center;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Watson NLP — Emotion Detection</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f1f4f8; color: #172337; font: 18px/1.6 system-ui, sans-serif; }
+    main { max-width: 960px; margin: 70px auto; padding: 42px; background: white; border-radius: 14px; box-shadow: 0 8px 35px #17233712; }
+    .eyebrow { color: #3159a3; font-size: 14px; letter-spacing: 2px; font-weight: 700; }
+    h1 { font-size: 36px; margin: 8px 0; }
+    p { color: #556477; }
+    label { display: block; font-weight: 600; margin: 26px 0 8px; }
+    textarea { width: 100%; min-height: 120px; padding: 15px; border: 1px solid #9daabe; border-radius: 6px; font: inherit; }
+    button { margin-top: 18px; padding: 13px 24px; color: white; background: #2455b3; border: 0; border-radius: 6px; font: 600 16px system-ui; cursor: pointer; }
+    button:disabled { opacity: .6; }
+    h2 { font-size: 22px; margin-top: 36px; }
+    #system_response { padding: 20px; background: #edf3ff; border-left: 4px solid #2455b3; border-radius: 4px; overflow-wrap: anywhere; }
+    @media(max-width: 650px) { main { margin: 20px 12px; padding: 24px; } h1 { font-size: 28px; } }
+  </style>
+  <script src="/static/mywebscript.js" defer></script>
 </head>
 <body>
-    <div class="card">
-        <div class="card-body">
-            <h1 class="center-heading">NLP - Emotion Detection</h1> 
-            <div style="padding: 25px 25px 25px 25px;">
-            <h2 class="mb-3">
-                <label class="form-label">Please enter the text to be analyzed</label>
-                <input type="textarea" class="form-control" id="textToAnalyze">
-            </h2>
-
-            <div style="padding: 25px 25px 25px 25px;">
-                <button onclick="RunSentimentAnalysis()" class="btn btn-secondary">Run Sentiment Analysis</button>
-            </div>
-            <div style="padding: 25px 25px 25px 25px;"></div>
-            <h2 class="mb-3">
-                <label class="form-label">Result of Emotion Detection</label>
-            </h2>
-
-            <div id="system_response" style="padding: 25px 25px 25px 25px;"></div>
-        </div>
-    </div>
+<main>
+  <div class="eyebrow">FINAL PROJECT · IBM WATSON NLP</div>
+  <h1>NLP — Emotion Detection</h1>
+  <p>Analyze English text for anger, disgust, fear, joy and sadness.</p>
+  <form id="emotion-form">
+    <label for="textToAnalyze">Please enter the text to be analyzed</label>
+    <textarea id="textToAnalyze" name="textToAnalyze" placeholder="Write a statement in English..."></textarea>
+    <button id="analyze-button" type="submit">Run Emotion Analysis</button>
+  </form>
+  <h2>Result of Emotion Detection</h2>
+  <div id="system_response" role="status" aria-live="polite">Your analysis will appear here.</div>
+</main>
 </body>
+</html>
